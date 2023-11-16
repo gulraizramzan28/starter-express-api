@@ -26,7 +26,7 @@ app.use(cors({
 //     api_key: process.env.CLOUD_API_KEY,
 //     api_secret: process.env.CLOUD_SECRET,
 //   });
-app.use("/api/cloudinary", cloudinaryRoutes);
+// app.use("/api/cloudinary", cloudinaryRoutes);
 app.use('/api',userRouter)
 app.use('/api',productRouter)
 app.listen(process.env.PORT,()=>{
