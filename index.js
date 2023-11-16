@@ -6,7 +6,7 @@ import dbconnection from './services/dbconnection.js';
 import productRouter from './routers/productsRouter.js';
 import fileUpload from 'express-fileupload';
 import {v2 as cloudinary} from 'cloudinary';
-import cloudinaryRoutes from './routers/cloudinaryRoute.js'
+// import cloudinaryRoutes from './routers/cloudinaryRoute.js'
 import cors from 'cors'
 dotenv.config();
 const app=expess();
@@ -21,11 +21,11 @@ app.use(cors({
     allowedHeaders:["content-Type","Authorization"]
 
 }))
-cloudinary.config({
-    cloud_name: process.env.CLOUD_NAME,
-    api_key: process.env.CLOUD_API_KEY,
-    api_secret: process.env.CLOUD_SECRET,
-  });
+// cloudinary.config({
+//     cloud_name: process.env.CLOUD_NAME,
+//     api_key: process.env.CLOUD_API_KEY,
+//     api_secret: process.env.CLOUD_SECRET,
+//   });
 app.use("/api/cloudinary", cloudinaryRoutes);
 app.use('/api',userRouter)
 app.use('/api',productRouter)
