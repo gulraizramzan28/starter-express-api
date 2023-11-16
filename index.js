@@ -15,12 +15,12 @@ app.use(bodyparser.json());
 app.use(fileUpload({
     useTempFiles: true
 }))
-app.use(cors({
-    origin: "*",
-    methods: "GET, POST, PUT, DELETE",
-    allowedHeaders:["content-Type","Authorization"]
+// app.use(cors({
+//     origin: "http://localhost:3000",
+//     methods: "GET, POST, PUT, DELETE",
+//     allowedHeaders:["content-Type","Authorization"]
 
-}))
+// }))
 // cloudinary.config({
 //     cloud_name: process.env.CLOUD_NAME,
 //     api_key: process.env.CLOUD_API_KEY,
