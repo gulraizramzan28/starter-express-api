@@ -16,7 +16,7 @@ app.use(fileUpload({
     useTempFiles: true
 }))
 app.use(cors({
-    origin: "https://benevolent-marshmallow-6b17aa.netlify.app/",
+    origin: "*",
     methods: "GET, POST, PUT, DELETE",
     allowedHeaders:["content-Type","Authorization"]
 
